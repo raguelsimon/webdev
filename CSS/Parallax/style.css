@@ -1,38 +1,97 @@
-html{
+/* Import the external font using @font-face */
+@font-face {
+    font-family: PoppinsB; /* Choose a name for your font */
+    src: url('font/Poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: PoppinsL;
+    src: url('font/Poppins/Poppins-Light.ttf');
+}
+
+
+*{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    height: 100dvh;
+    box-sizing: border-box; 
 }
 
 #wrapper{
+    height: 100vh;
     overflow-x: hidden;
-    overflow-y: auto; 
+    overflow-y: auto;
     perspective: 10px;
 
 }
 
 .container{
     position: relative;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
     transform-style: preserve-3d;
     z-index: -1;
-}
-
-.background{
-    transform: translateZ(-40px) scale(5);
-}
-
-.foreground{
-    transform: translateZ(-20px) scale(3);
 }
 
 .background, .foreground{
     position: absolute;
     height: 100%;
     width: 100%;
-    z-index: -1; 
+    object-fit: cover;
+    z-index: -1;
+}
+
+.background{
+    transform: translateZ(-40px) scale(6);
+}
+
+.foreground{
+    transform: translateZ(-20px) scale(3);
+}
+
+h1{
+    font-family: PoppinsB; /*Use the font-family you defined*/
+    position: absolute;
+    top: 15rem;
+    left: 50%;
+    transform: translateX(-50%);
+    letter-spacing: 4px;
+    font-size: 10rem;
+    color: white;
+    text-shadow: 0 0 10px rgba(0,0,0,0.3);
+
+}
+
+section{
+    background-color: #303030;
+    color: white;
+    padding: 5rem 0;
+}
+
+.sechead{
+    font-family: PoppinsB;
+    font-size: 4rem;
+    padding: 0 4rem;
+}
+
+.text{
+    font-family: PoppinsL;
+    font-size: 20px;
+    padding: 0 4rem;
+}
+
+.bg{
+    position: relative;
+    height: 500px;
+    width: 100%; 
+    background-attachment: fixed;
+}
+
+.cycling{
+    background-image: url(assets/Cycling.jpg);
+}
+
+.swimming{
+    background-image: url(assets/Swimming.jpg);
 }
