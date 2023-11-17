@@ -71,14 +71,15 @@ section{
 
 .sechead{
     font-family: PoppinsB;
-    font-size: 4rem;
+    font-size: 5rem;
     padding: 0 4rem;
 }
 
 .text{
     font-family: PoppinsL;
     font-size: 20px;
-    padding: 0 4rem;
+    padding: 0 4rem ;
+    margin: 4rem 0;
 }
 
 .bg{
@@ -86,13 +87,29 @@ section{
     height: 500px;
     width: 100%; 
     background-attachment: fixed;
+    background-position: center;
     background-size: cover;
 }
 
+.headbg{
+    position: absolute;
+    background-color: white;
+    padding: 0.5rem 2.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    
+    font-family: PoppinsB;
+    color: black;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
 .cycling{
-    background-image: url(assets/Cycling.jpg);
+    background-image: url(assets/Cycling.png);
+    
 }
 
 .swimming{
-    background-image: url(assets/Swimming.jpg);
+    background-image: url(assets/Swimming.png);
 }
